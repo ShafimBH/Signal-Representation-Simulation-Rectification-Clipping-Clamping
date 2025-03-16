@@ -1,0 +1,188 @@
+
+**** 09/09/19 04:52:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2-1\MatLab\2-1 Project\New folder\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Sep 09 04:52:07 2019
+
+
+
+** Analysis setup **
+.tran 0ns 0.2s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+R_R2         0 $N_0001  10k  
+V_V1         $N_0002 0 DC 0 AC 0
++SIN 0 10 50 0 0 0
+R_R3         $N_0002 $N_0001  1  
+V_V3         0 $N_0003 3
+V_V2         $N_0004 0 5
+D_D2         $N_0003 $N_0001 D1N4002 
+D_D1         $N_0001 $N_0004 D1N4002 
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=0 2=$N_0001 )
+V_V1            V1(+=$N_0002 -=0 )
+R_R3            R3(1=$N_0002 2=$N_0001 )
+V_V3            V3(+=0 -=$N_0003 )
+V_V2            V2(+=$N_0004 -=0 )
+D_D2            D2(1=$N_0003 2=$N_0001 )
+D_D1            D1(1=$N_0001 2=$N_0004 )
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 09/09/19 04:52:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2-1\MatLab\2-1 Project\New folder\Schematic1.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         
+          IS   14.110000E-09 
+           N    1.984        
+         ISR  100.000000E-12 
+         IKF   94.81         
+          BV  100.1          
+         IBV   10            
+          RS     .03389      
+          TT    4.761000E-06 
+         CJO   51.170000E-12 
+          VJ     .3905       
+           M     .2762       
+
+
+**** 09/09/19 04:52:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2-1\MatLab\2-1 Project\New folder\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001) 24.82E-12                   ($N_0002)    0.0000                       
+
+($N_0003)   -3.0000                   ($N_0004)    5.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         2.482E-11
+    V_V3        -1.429E-08
+    V_V2        -1.432E-08
+
+    TOTAL POWER DISSIPATION   1.14E-07  WATTS
+
+
+**** 09/09/19 04:52:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2-1\MatLab\2-1 Project\New folder\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_D2        D_D1      
+MODEL        D1N4002     D1N4002   
+ID          -1.43E-08   -1.43E-08 
+VD          -3.00E+00   -5.00E+00 
+REQ          1.73E+11    2.42E+11 
+CAP          2.82E-11    2.48E-11 
+**** 09/09/19 04:52:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2-1\MatLab\2-1 Project\New folder\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001) 24.82E-12                   ($N_0002)    0.0000                       
+
+($N_0003)   -3.0000                   ($N_0004)    5.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         2.482E-11
+    V_V3        -1.429E-08
+    V_V2        -1.432E-08
+
+    TOTAL POWER DISSIPATION   1.14E-07  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .13
+

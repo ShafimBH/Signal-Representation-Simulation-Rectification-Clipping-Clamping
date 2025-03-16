@@ -1,0 +1,23 @@
+* D:\2-1\MatLab\2-1 Project\New folder\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Sep 09 04:52:07 2019
+
+
+
+** Analysis setup **
+.tran 0ns 0.2s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END
